@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * 此工具类用于读取和写入文件
  */
-public class FileUtils {
+public class FileUtil {
     /**
      * 该函数为读取文件并返回文件内容字符串，可能抛出文件不存在，记得try/catch处理
      *

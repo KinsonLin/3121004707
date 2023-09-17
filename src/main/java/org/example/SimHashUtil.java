@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 此工具类用于计算SimHash和海明距离
  */
-public class SimHashUtils {
+public class SimHashUtil {
     /**
      * 传入String，计算出它的hash值，并以字符串形式输出
      *

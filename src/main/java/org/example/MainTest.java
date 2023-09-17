@@ -1,18 +1,25 @@
 package org.example;
 
+import org.junit.Test;
+
 import java.io.IOException;
 
+public class MainTest {
+    @Test
+    public void mainTest() {
+        String[] s = new String[3];
 
-public class Main {
-    public static void main(String[] args) {
+        s[0] = "D:\\orig.txt";
+        s[1] = "D:\\orig_0.8_add.txt";
+        s[2] = "D:\\ans.txt";
         String simHash0;
         String simHash1;
         String str0;
         String str1;
-        if (args.length < 3) return;
+//        if (args.length < 3) return;
         try {
-            str0 = FileUtil.readFile(args[0]);
-            str1 = FileUtil.readFile(args[1]);
+            str0 = FileUtil.readFile(s[0]);
+            str1 = FileUtil.readFile(s[1]);
         } catch (IOException e) {
             System.out.println("找不到指定文件");
             return;
@@ -28,8 +35,8 @@ public class Main {
         System.out.print("相似度: ");
         System.out.println(similarity);
         try {
-            FileUtil.writeFile(args[2], String.valueOf(similarity));
-            System.out.println("结果写入文件 "+args[2]+" 完成");
+            FileUtil.writeFile(s[2], String.valueOf(similarity));
+            System.out.println("结果写入文件 "+s[2]+" 完成");
         } catch (IOException e) {
         }
         System.out.println("计算结束，程序自动退出");
